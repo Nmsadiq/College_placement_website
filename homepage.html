@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>  
+    <title>Student Information</title>
+  <style>
+        
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+            animation: fadeIn 1s;
+        }
+
+        h1 {
+            color: #333;
+            animation: slideIn 1s;
+        }
+
+        form {
+            width: 300px;
+            margin: 0 auto;
+            text-align: left;
+            animation: slideIn 1s;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 5px;
+            animation: scaleIn 1s;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #370909;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            animation: scaleIn 1s;
+        }
+    </style>
+        <script>//java script
+            function validateForm() {
+                var name = document.getElementById('name').value;
+                var branch = document.querySelector('input[name="branch"]:checked');
+                var offerType = document.getElementById('offer_type').value;
+                var package = document.getElementById('package').value;
+                var nameRegex = /^[A-Za-z\s]+$/; // Regular expression for alphabetic characters and space
+                var packageRegex = /^\d+$/; // Regular expression for numeric characters
+            
+                if (!name.match(nameRegex)) {
+                    alert("Please enter only text in the Name field");
+                    return false;
+                }
+            
+                if (!package.match(packageRegex)) {
+                    alert("Please enter only numbers in the Package field");
+                    return false;
+                }
+            
+                if (name === "" || branch === null || offerType === "" || package === "") {
+                    alert("Please fill in all fields");
+                    return false;
+                }
+            
+                return true;
+            }
+            </script>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 20px; text-align: center;">
+
+
+    <form method="POST" action="u1.php"  onsubmit="return validateForm();">
+    <br></br>
+    <br></br>
+    <strong><label for="name" style="display: block; margin-top: 10px;">Name:</label></strong>
+        <input type="text" id="name" name="name" required><br><br>
+        <div style="display: flex; flex-direction: row; justify-content: center;">
+        <strong><label for="name" style="display: block; margin-top: 10px;">Branch:</label></strong>
+    </div>
+    
+    <div style="display: flex; flex-direction: row; justify-content: center; margin-top: 10px;">
+        <div style="display: flex; flex-direction: row;">
+            <input type="radio" id="branchCSE" name="branch" value="CSE" required>
+            <label for="branchCSE" style="margin-top: 10px; margin-right: 10px;">CSE</label>
+        </div>
+    
+        <div style="display: flex; flex-direction: row;">
+            <input type="radio" id="branchMech" name="branch" value="Mech" required>
+            <label for="branchMech" style="margin-top: 10px; margin-right: 10px;">Mechanical</label>
+        </div>
+    
+        <div style="display: flex; flex-direction: row;">
+            <input type="radio" id="branchISE" name="branch" value="ISE" required>
+            <label for="branchISE" style="margin-top: 10px; margin-right: 10px;">ISE</label>
+        </div>
+    
+        <div style="display: flex; flex-direction: row;">
+            <input type="radio" id="branchEEE" name="branch" value="EEE" required>
+            <label for="branchEEE" style="margin-top: 10px; margin-right: 10px;">EEE</label>
+        </div>
+    
+        <div style="display: flex; flex-direction: row;">
+            <input type="radio" id="branchChem" name="branch" value="Chem" required>
+            <label for="branchChem" style="margin-top: 10px; margin-right: 10px;">Chemical</label>
+        </div>
+    
+        <div style="display: flex; flex-direction: row;">
+            <input type="radio" id="branchECE" name="branch" value="ECE" required>
+            <label for="branchECE" style="margin-top: 10px;">ECE</label>
+        </div>
+    </div>
+    
+    
+    
+    
+        <!-- Other branch radio inputs... -->
+    <br></br>
+        <strong><label for="offer_type">Offer Type:</label></strong>
+        <select id="offer_type" name="offer_type" required>
+            <option value="">Select offer type</option>
+            <option value="Internship">Internship</option>
+            <option value="Full Time">Full Time</option>
+        </select><br><br>
+        <br></br>
+        <strong><label for="package">Package:</label></strong>
+        <input type="text" id="package" name="package" required><br><br>
+    
+        <input type="submit" value="Submit" style="width: 100%; padding: 10px; background-color: #007bff; color: #fff; border: none; cursor: pointer; margin-top: 20px;">
+    </form>
+
+</body>
+</html>
+   
+   
+    <footer>
+        <button onclick="window.location.href = 'toggle.html';">Go to Home</button>
+    </footer>
+    
+</body>
+</html>

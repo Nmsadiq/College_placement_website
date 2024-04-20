@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <title>Placement Portal</title>
+    <style>
+        /* Basic CSS for styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #007ACC;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+    
+    
+
+        .styled-paragraph {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        .image-container {
+            float: left;
+            margin-right: 200px; /* Adjust the margin as needed */
+        }
+
+        /* Additional styles can be added for the login form and statistics page */
+    </style>
+    <script>
+        function openPDF(pdfURL) {
+            window.open(pdfURL, '_blank');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        
+        <h1>Welcome to the Placement Portal</h1>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="javascript:void(0);" onclick="openPDF('statistics.pdf')">Statistics</a></li>
+                <li><a href="https://sdmcet.ac.in/">College Website</a></li>
+                <li><a href="stats01.php">Live Statistics</a></li>
+                <li><a href="login.html">Admin Login</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <marquee behavior="scroll" direction="left">
+            <h2>Placements</h2>
+        </marquee>
+        <div class="styled-paragraph">
+            <p>Solid Placement Record Throughout
+                Internships are increasingly being offered to selected students. In collaboration with CIII and departments, students are made to undergo training in different modules that are relevant to training and placement and are ingrained with adequate skills such as aptitude, communication. These skills combined with students' technical knowledge gained in their engineering courses make them placement-ready by the end of VI semester.
+                Every year a large number of regular and new companies start campus hiring around July. The range of companies visiting campus includes industry leaders, national and international brands and core that are specific to each branch of engineering. On average, every year more than 100 companies visit our campus and more than 80% of students are placed. We are striving to sustain our success and achieve more in the coming years!.
+                
+            </p><img src="SDMCET-collage.png" alt="Welcome Image" width="500" height="500">
+            
+        </div>       
+        <footer>
+   
+            <p>&copy; 2023 Placement Portal</p></footer>
+        </div>
+    </div>
+    
+</body>
+
+</html>

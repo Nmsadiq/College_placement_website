@@ -1,0 +1,6 @@
+<!ELEMENT htmlForm (name, branch, offer_type, package, company)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT branch (#PCDATA)>
+<!ELEMENT offer_type (#PCDATA)>
+<!ELEMENT package (#PCDATA)>
+<!ELEMENT company (#PCDATA)>
